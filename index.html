@@ -27,18 +27,18 @@
 <!--JavaScript-->
 <script type="text/javascript">
 
-	$(document).ready(function()) {
+	$(document).ready(function() {
 
 	var heresTheNewQuote = $('#heresTheNewQuote');
 	
 	renderQuote = function(data) {
 		heresTheNewQuote.html(data);
 	};	
-	getQuote = function() {
+	theNewQuote = function() {
 		$.get('https://api.github.com/zen',renderQuote)
 	}
 	$('.btn').click(function() {
-			getQuote();
+			theNewQuote();
 	});
 });
 
